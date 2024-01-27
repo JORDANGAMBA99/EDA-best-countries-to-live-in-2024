@@ -1,0 +1,15 @@
+-- Create  a table
+create table best_countries_to_live_in_2024(
+population_2024 bigint,
+population_growthRate numeric(10,7),
+land_area bigint,
+country varchar(50),
+region varchar(50),
+unMember boolean,
+population_density float,
+population_densityMi double precision,
+share_borders varchar(60),
+Hdi2021 real,
+Hdi2020 real,
+WorldHappiness2022 double precision
+)
