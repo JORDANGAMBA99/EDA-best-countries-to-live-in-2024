@@ -13,3 +13,26 @@ Hdi2021 real,
 Hdi2020 real,
 WorldHappiness2022 double precision
 )
+
+select * from best_countries_to_live_in_2024
+
+-- Quality of life
+-- Which countries have the highest and lowest World Happiness scores in 2022?
+
+select country,WorldHappiness2022
+from best_countries_to_live_in_2024
+group by country,WorldHappiness2022
+order by WorldHappiness2022 desc
+
+-- How do population density, land area, and population growth rate correlate with the World Happiness Index?
+
+- We first of all try to aggregate with population_density to see if their is a coorelation
+- Between population_density and Worldhappiness score
+- There is no coorelation whatsoever
+
+ --- Also we checked the happiness coorelation with population 
+ --- In this query we highlighted Africa with respect to population adn arranged dit in desc or asc
+ --- The worldhappiness score varied as most african countries have a low score apart from Mauritius
+ --- Mauritius has the highest score
+ --- Therefore population or even population density is not a factor that affects happiness
+
