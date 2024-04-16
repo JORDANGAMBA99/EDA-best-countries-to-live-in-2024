@@ -12,3 +12,5 @@ In this SQL project I wanted to explore the happiest countries to live in terms 
 - Hdi2021 
 - Hdi2020 
 - WorldHappiness2022
+
+I also looked at how the follwoing factors affected the quality of life in each and every country
