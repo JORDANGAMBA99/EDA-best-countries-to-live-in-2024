@@ -1,2 +1,14 @@
 # EDA-best-countries-to-live-in-2024
-In this SQL project is wanted to explore the best countries to live in by monitoring HDI development in countries and also checking the happiness indexes in developing countries and eveloped countries. 
+In this SQL project I wanted to explore the happiest countries to live in terms of the following factors :
+- population_2024 
+- population_growthRate 
+- land_area 
+- country 
+- region 
+- unMember 
+- population_density 
+- population_densityMi 
+- share_borders 
+- Hdi2021 
+- Hdi2020 
+- WorldHappiness2022
