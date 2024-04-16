@@ -24,15 +24,34 @@ from best_countries_to_live_in_2024
 group by country,WorldHappiness2022
 order by WorldHappiness2022 desc
 
--- How do population density, land area, and population growth rate correlate with the World Happiness Index?
+Our data for happiness index only takes into account 41 african countries no matter we can use this to justify our theory
+select happiness_by_population.country,
+best_countries_to_live_in_2024.hdi2021,
+best_countries_to_live_in_2024.worldhappiness2022
+from best_countries_to_live_in_2024 join happiness_by_population
+on best_countries_to_live_in_2024.country = happiness_by_population.country
+group by best_countries_to_live_in_2024.hdi2021,
+happiness_by_population.country,
+best_countries_to_live_in_2024.worldhappiness2022
+order by best_countries_to_live_in_2024.hdi2021 desc
 
-- We first of all try to aggregate with population_density to see if their is a coorelation
-- Between population_density and Worldhappiness score
-- There is no coorelation whatsoever
+The results are mixed in general as the top 3 african countries have a higher happiness score 
+but generally we have a mixed bag of results
 
- --- Also we checked the happiness coorelation with population 
- --- In this query we highlighted Africa with respect to population adn arranged dit in desc or asc
- --- The worldhappiness score varied as most african countries have a low score apart from Mauritius
- --- Mauritius has the highest score
- --- Therefore population or even population density is not a factor that affects happiness
+Do countries with lower population density tend to have higher happiness scores?
 
+select country,population_density,worldhappiness2022
+from best_countries_to_live_in_2024
+where worldhappiness2022 > 5
+group by country,population_density,worldhappiness2022
+order by population_density asc
+
+## Yes it is true from my query that the countries with lower population density tend to have a higher happiness score
+The below article proves my hypothesis from the query
+https://www.weforum.org/agenda/2018/05/people-who-live-in-small-towns-and-rural-areas-are-happier-than-everyone-else-researchers-say/
+
+# This does not mean that lower population density = increase happiness score
+
+How does population growth rate impact a country's overall quality of life?
+•	Are countries experiencing rapid population growth less likely to have high World Happiness scores?
+Yeahh 
